@@ -1,3 +1,6 @@
+## To read this file download data here: https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip
+## Set working directory in R to wherever you saved the household_power_consumption file
+
 ## Read and tidy up data
 Prj1 <- read.table("household_power_consumption.txt", header=T, sep=";", na.strings= "?")
 

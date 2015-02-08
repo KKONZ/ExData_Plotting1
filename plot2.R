@@ -1,0 +1,14 @@
+## Read and tidy up data
+Prj1 <- read.table("household_power_consumption.txt", header=T, sep=";", na.strings= "?")
+
+## subset to 2/1 & 2/2 from 2007
+subData <- subset(Prj1, (Prj1$Date == "1/2/2007" | Prj1$Date == "2/2/2007"))
+subData$Date <- as.Date(subData$Date, format = "%d/%m/%Y")
+
+## Combine Date and time
+subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
+
+## Create 2nd plot and save as png graphics device
+png("plot2.png", width = 480, height = 480)
+subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
+dev.off()

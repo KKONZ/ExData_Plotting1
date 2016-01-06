@@ -12,6 +12,6 @@ subData$Date <- as.Date(subData$Date, format = "%d/%m/%Y")
 subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
 
 ## Create 2nd plot and save as png graphics device
+png("plot2.png", width = 480, height = 480)
 plot(subData$Date_Time,subData$Global_active_power,ylab="global active power",xlab="",type="l")
-dev.copy(png, file="plot2.png",width=480,height=480)
 dev.off()

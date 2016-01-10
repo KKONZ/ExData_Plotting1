@@ -9,7 +9,7 @@ subData <- subset(Prj1, (Prj1$Date == "1/2/2007" | Prj1$Date == "2/2/2007"))
 subData$Date <- as.Date(subData$Date, format = "%d/%m/%Y")
 
 ## Combine Date and time
-subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
+subData$DateTime <- as.POSIXct(paste(subData$Date, subData$Time))
 
 png("plot3.png", width = 480, height = 480)
 plot(subData$DateTime, subData$Sub_metering_1, type="l", ylab= "Energy sub metering", xlab="")

@@ -9,7 +9,7 @@ subData <- subset(Prj1, (Prj1$Date == "1/2/2007" | Prj1$Date == "2/2/2007"))
 subData$Date <- as.Date(subData$Date, format = "%d/%m/%Y")
 
 ## Combine Date and time
-subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
+subData$DateTime <- as.POSIXct(paste(subData$Date, subData$Time))
 
 png("plot4.png", width = 480, height = 480)
 par(mfcol=c(2,2))

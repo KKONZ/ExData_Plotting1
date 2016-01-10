@@ -10,5 +10,5 @@ subData$Date <- as.Date(subData$Date, format = "%d/%m/%Y")
 
 ## Create Hist and save as png graphics device
 png("plot1.png", width = 480, height = 480)
-hist(subData$Global_active_power, type="l", main="Global Active Power",col='red', ylab= "Frequency", xlab="Global Active Power(kilowatts)")
+hist(subData$Global_active_power, main="Global Active Power",col='red', ylab= "Frequency", xlab="Global Active Power(kilowatts)")
 dev.off()

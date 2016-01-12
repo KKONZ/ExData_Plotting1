@@ -14,7 +14,7 @@ subData$DateTime <- as.POSIXct(paste(subData$Date, subData$Time))
 png("plot4.png", width = 480, height = 480)
 par(mfcol=c(2,2))
 
-hist(subData$Global_active_power, main="Global Active Power",col='red', ylab= "Frequency", xlab="Global Active Power(kilowatts)")
+plot(subData$DateTime,subData$Global_active_power,ylab="global active power",xlab="",type="l")
 subData$Date_Time <- as.POSIXct(paste(subData$Date, subData$Time))
 plot(subData$DateTime, subData$Sub_metering_1, type="l", ylab= "Energy sub metering", xlab="")
 lines(subData$DateTime, subData$Sub_metering_2, type="l", col="red")
